@@ -17,14 +17,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark" style="position: absolute;">
         <div class="containers">
-            <a class="navbar-brand" href="home.html"> <h3>Green Reward</h3></a>
+            <a class="navbar-brand" href="home.html"> <h1 style="font-weight: 500; color: black;">Green Reward</h1></a>
 
         </div>
     </nav>
     <div class="containers">
-        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+        <div id="content" >{% block content %}{% endblock %}</div>
     </div>
 </body>
 

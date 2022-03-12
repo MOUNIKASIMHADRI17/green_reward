@@ -1,23 +1,8 @@
 {% extends "base.html" %} {% block content %}
 
-<h2>Claim your Reward</h2>
+
 <style>
 
-body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background: hsla(59, 86%, 68%, 1);
-
-background: linear-gradient(90deg, hsla(59, 86%, 68%, 1) 0%, hsla(134, 36%, 53%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(59, 86%, 68%, 1) 0%, hsla(134, 36%, 53%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(59, 86%, 68%, 1) 0%, hsla(134, 36%, 53%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F4F269", endColorstr="#5CB270", GradientType=1 );
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
 
 @keyframes gradient {
 	0% {
@@ -165,15 +150,18 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F4F269", en
 
   .container {
     width: 100%;
+    margin-left: 80%;
     padding-top: 60px;
     padding-bottom: 100px;
     
   }
 
   .frame {
+    margin-top: 13%;
     padding-bottom: 1em;
     width: 550px;
-    background-color: rgba(255, 255, 255, .15);  
+    background-color: #FFFF7A;
+    /*background-color: rgba(255, 255, 255, .15);  */
     backdrop-filter: blur(5px);
     box-shadow: -1rem 0 3rem #000;
     margin-left: auto;
@@ -318,7 +306,15 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F4F269", en
     color: black;
     display: block;
   }
-
+.a5{
+  font-weight: 700;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    color: black;
+    display: block;
+}
   :focus {outline: none;
   }
 
@@ -711,87 +707,151 @@ h3{
   color: black;
   
 }
+
+.rot-360-noscoop:hover {
+  filter: hue-rotate(360deg);
+  transform: rotate(360deg);
+}
+.rot-135:hover {
+  filter: hue-rotate(135deg);
+}
+.rot-90:hover {
+  filter: hue-rotate(90deg);
+}
+/*END ROTATE*/
+
+
+        .l{
+            position:absolute;
+        }
+
+        
+        #bg-wrap{
+            margin: auto;
+        }
+
+        .master{
+          position: absolute;
+        }
 </style>
 
-<div>
 
-    <div class="container">
-        <div class="frame">
-            
-            <div>
-              <!-- <form class="form-signin" action="" method="post" name="form"> -->
-                <div class="form-signin" action="" method="post" name="form">
-                    <label for="username">Address</label>
-                    <input class="form-styling" type="text" id="address" name="username" placeholder="Enter Address" autocomplete="off"/>
-                    
-
-                           
-<label for="type">Category</label>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <form id="upload-file" method="post" enctype="multipart/form-data">
-        <label for="imageUpload" class="upload-label">
-            Upload...
-        </label>
-        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
-    </form>
-
-    <div class="image-section" style="display:none;">
-        <div class="img-preview">
-            <div id="imagePreview">
-            </div>
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict Class</button>
-        </div>
-    </div>
-
-    <div class="loader" style="display:none;"></div>
-
-    <h3 id="result">
-        
-    </h3>
-
-
-
-
+<div class="master">
   
-                    <!--
-                    <select id="category" class="form-styling">
-                        <option value="1">Plastic</option>
-                        <option value="2">Metal</option>
-                        <option value="3">Paper</option>
-                        <option value="4">Others</option>
-                    </select>
-                -->
-    
-                    <label for="password">Weight</label>
-                    <input class="form-styling" type="number" id="weight" name="amount" placeholder=""/>
-                    
+  <div class="container">
+      <div class="frame">
+          
+          <div>
+            <!-- <form class="form-signin" action="" method="post" name="form"> -->
+              <div class="form-signin" action="" method="post" name="form">
+                <h2 class ="a5" style="margin-top: 2%;">Claim your Reward</h2>
+                  <label for="username">Address</label>
+                  <input class="form-styling" type="text" id="address" name="username" placeholder="Enter Address" autocomplete="off"/>
+                  
+
+                         
+<label for="type">Category</label>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <form id="upload-file" method="post" enctype="multipart/form-data">
+      <label for="imageUpload" class="upload-label">
+          Upload...
+      </label>
+      <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+  </form>
+
+  <div class="image-section" style="display:none;">
+      <div class="img-preview">
+          <div id="imagePreview">
+          </div>
+      </div>
+      <div>
+          <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict Class</button>
+      </div>
+  </div>
+
+  <div class="loader" style="display:none;"></div>
+
+  <h3 id="result">
+      
+  </h3>
 
 
-                    <div class="btn-animate">
-                        <a class="btn-signin" onclick=" pay();">Submit</a>
 
-                    </div>
-                    <div id="status"></div>
-                    
+
+
+                  <!--
+                  <select id="category" class="form-styling">
+                      <option value="1">Plastic</option>
+                      <option value="2">Metal</option>
+                      <option value="3">Paper</option>
+                      <option value="4">Others</option>
+                  </select>
+              -->
+  
+                  <label for="password">Weight</label>
+                  <input class="form-styling" type="number" id="weight" name="amount" placeholder=""/>
+                  
+
+
+                  <div class="btn-animate">
+                      <a class="btn-signin" onclick=" pay();">Submit</a>
+
+                  </div>
+                  <div id="status"></div>
+                  
 <div class="cd-popup" role="alert">
-  <div class="cd-popup-container">
-    <p>Payment Submitted. Please check explorer by clicking here!</p>
-    <ul class="cd-buttons">
-      <li><a href="">Verfiy</a></li>
-    </ul>
-    <a href="" class="cd-popup-close img-replace"></a>
-  </div> <!-- cd-popup-container -->
+<div class="cd-popup-container">
+  <p>Payment Submitted. Please check explorer by clicking here!</p>
+  <ul class="cd-buttons">
+    <li><a href="">Verfiy</a></li>
+  </ul>
+  <a href="" class="cd-popup-close img-replace"></a>
+</div> <!-- cd-popup-container -->
 </div> <!-- cd-popup -->
 
-                </div>
-                
-            </div>
-            </div>
-        </div>
-            
-    </div>
+              </div>
+              
+          </div>
+          </div>
+      </div>
+          
+  </div>
+
+
+
+  <div id="bg-wrap">
+  
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" style="height: 990px; width:1519px;">
+      <defs>
+      <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
+      <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
+      <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+      <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
+      <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+      <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+      </defs>
+      <!--<rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
+      <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
+      <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)">
+      <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" />
+      <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)">
+      <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" />
+      <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
+      </rect>-->
+      <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
+      <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+      </rect>
+      <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+      </rect>
+      </svg>
+  </div>
 
 
 
