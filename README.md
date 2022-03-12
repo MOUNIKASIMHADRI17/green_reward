@@ -1,28 +1,16 @@
-# Traffic🚦 Signs Classification App
+# GreenReward
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)   
-
-## [Follow us on Instagram for Machine Learning Guidelines & Path](https://www.instagram.com/machine_learning_hub.ai/)
-## [Watch Tutorial Videos of these all projects](https://www.youtube.com/c/MachineLearningHub)
-## [Buy Python & ML projects for students at lower rate](https://www.instamojo.com/kushalbhavsar1820)
-
-## Usage:-
-
-- Clone my repository.
-- Open CMD in working directory.
-- Run `Traffic_app.py`.
-- Go to the `http://127.0.0.1:5000` and test it. It is a local Flask App.
-- Heroku App is available here:- [Traffic🚦 Signs Classification App](https://traffic-sign-predict.herokuapp.com/)
-
-## Screenshots
-
-<img src="https://github.com/Spidy20/Traffic_Signs_WebApp/blob/master/1.PNG">
-<img src="https://github.com/Spidy20/Traffic_Signs_WebApp/blob/master/2.PNG">
-
-
-## Just follow☝️ me and Star⭐ my repository 
-
-# [Buy me a Coffee☕](https://www.buymeacoffee.com/spidy20)
-## [Donate me on PayPal(It will inspire me to do more projects)](https://www.paypal.me/spidy1820)
-## Donate me on GPAY:- kushalbhavsar58-1@okaxis
+## Inspiration
+Landfills are one of the largest producers of Methane and Green house gases. Even power generation from Waste produces CO2. Why is it a big problem? It is because of no proper way in dumping. All kind of wastes are dumped which leads to half degrading and pollution of local resources.Dumping of huge amount of waste also causes soil contamination,Water contamination,Air contamination and causes harm for marine and animal life. What if we segregate biodegradable wastes and recycle other ones? This can drastically cut down new production of plastics and safe degradation of all other kinds of wastes. But how do we **motivate** people to dump according to our waste management system? This is where GreenReward comes into action. Green Reward is a Decentralized Application that automatically rewards people who dump waste categorically. 
+## What it does
+GreenReward rewards people after dumping waste. Payment is governed by Smart Contract which ensures guaranteed, safe and quick reward payment to users. The entire application is deployed through IPFS which ensures safe, quick and lower downtime of application. People should get rewards instantly and should be of some value. We can't provide much rewards in traditional currencies. So we have used Crypto Tokens as rewards. Value of these tokens are volatile and may be of higher value in future. Government can provide regular services like Registrations, application fee, fine payment using these tokens. This can definitely drive people to use this DApp(Decentralized application).
+## How we built it
+I have built this DApp as Web App. Entire frontend is built using HTML,CSS,JS. Smart contracts are written using Solidity and deployed on Polygon network. Polygon network helps us in Reduced gas fee and faster transactions. Frontend and Smart contracts are connected using Web3.JS. This entire DApp is published through IPFS using Fleek platform. IPFS helps us in maintaining large sets of Data with more security features like no redundancy. 
+## Challenges we ran into
+Initially I thought of deploying this application using Rinkeby test network of Ethereum and it lead to higher gas fee and slower transactions. Then I switched to Layer-2 solution of Polygon. Though it was easy to switch we encountered difficulties in integrating it with Frontend. After further reading Web3.JS  and polygon docs I found the solution. Further I realized as this DApp grows we'll be having lot of data to handle. IPFS came to our rescue. I used Fleek platform to publish DApp on IPFS. Image classification and other predicting models need Multimedia data to predict what kind of waste and how much of it is deposited(next stage of project). IPFS can help us handle these situations.
+## Accomplishments that we're proud of
+I am proud of the entire project development and its execution as per timeline set. Initially I did not think of scalability issues with Data as users grow for this DApp and got to know about IPFS in workshop. So, I went through some resources and successfully published using it. I am proud of learning about new tech and using it in a very short period of time.
+## What we learned
+I learned about Decentralization and its benefits. Central authority can never be fool proof and projects should inculcate some kind of decentralization or distribution. I learned about Layer-2 solutions for Ethereum and its uses. Inter Planetary File System deployment taught us a lot. 
+## What's next for Green Reward
+Right now user manually enters Type of Waste and weight of waste. This is not good practice. Users will take advantage of this easily. I am thinking of using Machine Learning based Classification techniques to automatically determine type and weight of waste. This cannot be done due to time constraints for the hackathon. As these features will be integrated data plays important role and I will be using IPFS efficiently in upcoming versions.
