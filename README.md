@@ -5,7 +5,7 @@
   <h1 align="center">Green Reward</h1>
 
   <p align="center">
-    Decentralised rewards distribution for Waste Management using Blockchain & AI.
+    Decentralised reward distribution for Waste Management using Blockchain & AI.
     <br />
     <a href="https://github.com/MOUNIKASIMHADRI17/green_reward"><strong>Explore the docs »</strong></a>
     <br />
@@ -26,10 +26,18 @@
   
   
 ## What it does
-&nbsp; &nbsp; &nbsp; &nbsp;**GreenReward** rewards people after dumping waste categorically. Payment is governed by Smart Contract which ensures guaranteed, safe and quick reward payment to users. Deep Learning model integrated determines type of waste automatically. Huge dataset of over 2,200 images stored in IPFS is used to train and test the model. The entire application is deployed through IPFS which ensures safe, quick and lower downtime of application. People should get rewards instantly and should be of some value. We can't provide much rewards in traditional currencies. So we have used Crypto Tokens as rewards. Value of these tokens are volatile and may be of higher value in future. Government can provide regular services like Registrations, application fee, fine payment using these tokens. This can definitely drive people to use this DApp(Decentralized application).
+&nbsp; &nbsp; &nbsp; &nbsp;**GreenReward** rewards people after dumping waste categorically. Payment is governed by Smart Contract which ensures guaranteed, safe and quick reward payment to users. Deep Learning model integrated determines type of waste automatically. Huge dataset of over 2,200 images stored in IPFS is used to train and test the model. The entire application is deployed through IPFS which ensures safe, quick and lower downtime of application.
+  - AI/ML      - To determine the type of waste
+  - Blockchain - To distribute rewards
+
+&nbsp; &nbsp; &nbsp; &nbsp;People should get rewards instantly and should be of some value. We can't provide much rewards in traditional currencies. So we have used Crypto Tokens as rewards. Value of these tokens are volatile and may be of higher value in future. Government can provide regular services like Registrations, application fee, fine payment using these tokens. This can definitely drive people to use this DApp(Decentralized application).
+  - Polygon - Layer-2 network which is fast and scalable for Green Reward
+  - IPFS    - To store dataset of images for CNN model
 
 ## How we built it
-&nbsp; &nbsp; &nbsp; &nbsp;We have built this DApp as Web App. Entire frontend is built using HTML,CSS,JS. Smart contracts are written using Solidity and deployed on Polygon network. Polygon network helps us in Reduced gas fee and faster transactions. Frontend and Smart contracts are connected using Web3.JS. Convoultional Neural Network is used for determining type of waste instantly with just a picture. It has accuracy of 83% at present with dataset of 2,200+ images in IPFS. This entire DApp is published through IPFS using Fleek platform. IPFS helps us in maintaining large sets of Data with more security features like no redundancy. 
+&nbsp; &nbsp; &nbsp; &nbsp;We have built this DApp as Web App. Entire frontend is built using HTML,CSS,JS. Smart contracts are written using Solidity and deployed on Polygon network. Polygon network helps us in Reduced gas fee and faster transactions. Frontend and Smart contracts are connected using Web3.JS. Convoultional Neural Network is used for determining type of waste instantly with just a picture. It has accuracy of 83% at present with dataset of 2,200+ images in IPFS. This entire DApp is published through IPFS using Fleek platform. IPFS helps us in maintaining large sets of Data with more security features like no redundancy.
+  - Flask   - To integrate CNN model to Frontend
+  - Web3.js - To connect Smart Contracts with Frontend
 
 ## Challenges we ran into
 &nbsp; &nbsp; &nbsp; &nbsp;Initially we thought of deploying this application using Rinkeby test network of Ethereum and it lead to higher gas fee and slower transactions. Then we switched to Layer-2 solution of Polygon. Though it was easy to switch we encountered difficulties in integrating it with Frontend. After further reading Web3.JS  and polygon docs we found the solution. Further we realized that as this DApp grows we'll be having lot of data to handle. IPFS came to our rescue. We've used Fleek platform to publish DApp on IPFS. Image classification and other predicting models need Multimedia data to predict what kind of waste and how much of it is deposited. IPFS helped us handle these situations.
